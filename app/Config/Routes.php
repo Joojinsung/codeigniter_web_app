@@ -6,9 +6,8 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
-//get
-$routes->get('/', 'Board::main');
-$routes->get('/board/list', 'Board::index');
-$routes->get('/board/create', 'Board::create');
-//post
-$routes->post('/board/store', 'Board::store');
+$routes->get('/post/create', 'PostController::create');
+$routes->post('/post/store', 'PostController::store');
+
+$routes->get('/user/signup', 'UserController::signup');
+$routes->post('/user/store', 'UserController::store');
